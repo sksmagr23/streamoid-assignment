@@ -11,9 +11,7 @@ const router = express.Router();
 const upload = multer({ storage: multer.memoryStorage() });
 
 router.post('/upload', upload.single('file'), uploadProducts);
-
 router.get('/products', getAllProducts);
-
 router.get('/products/search', filterProducts);
 
 export default router;

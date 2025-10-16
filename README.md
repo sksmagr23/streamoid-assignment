@@ -6,6 +6,8 @@ This is a backend service designed to manage product data for online sellers. Th
 
 ```text
 streamoid-assignment/
+├── __tests__/
+│   └── product.test.js
 ├── config/
 │   └── mongo.js
 ├── controllers/
@@ -15,6 +17,8 @@ streamoid-assignment/
 ├── routes/
 │   └── product.routes.js
 ├── app.js                  # Main application file
+├── Dockerfile
+├── .dockerignore
 ├── .gitignore
 ├── .env.example
 ├── package.json
@@ -26,7 +30,8 @@ streamoid-assignment/
 -  **Backend**: `Node.js`, `Express.js`
 -  **Database**: `MongoDB` with `Mongoose` ODM for object data modeling.
 -  **File Handling**: `multer` for handling multipart/form-data (file uploads) and `csv-parser` for streaming and parsing large CSV files efficiently.
-
+-  **Testing**: `Jest` and Supertest for API integration testing.
+- **Containerization**: `Docker`
 ---
 
 ## Project Setup Instructions
@@ -67,12 +72,37 @@ The server will be running on `http://localhost:5000`.
 
 ---
 
+### Running with Docker (Alternative)
+We can also run this application in a Docker container for a consistent and isolated environment.
+
+1. Build the Docker image:
+```bash
+docker build -t product-service .
+```
+2. Run the Docker container:
+```bash
+docker run -d -p 5000:5000 --name product-api -e PORT=5000 -e MONGO_URI="<your-mongodb-connection-string>" product-service
+```
+The service will be accessible at `http://localhost:5000`.
+
+---
+
+### Testing with Jest
+- The test suite is configured to run against a separate test database to ensure development data is not affected. It automatically appends -test to our MONGO_URI connection string.
+- To execute the entire test suite, run the following command from the root directory:
+```bash
+npm test
+```
+> Jest will automatically find and run the test files located in the `__tests__` directory. The output will show a summary of all passing and failing unit tests.
+
+---
+
 ## API Documentation
 
 1. #### **Upload Products via CSV**
    
    - Uploads a CSV file, validates each row, and stores valid products in the database. This endpoint also performs an upsert operation: if a product with the same sku(unique product code) already exists, it will be updated; otherwise, a new product will be created.
-   - **Endpoint**: `POST /api/upload`
+   - **Endpoint**: *`POST /api/upload`*
    - **Content-Type**: multipart/form-data
    - **Request Body**: 
      - `file`: The CSV file to be uploaded.
@@ -127,7 +157,7 @@ The server will be running on `http://localhost:5000`.
 2. #### **List all Products**
    
    - Retrieves a paginated list of all products currently stored in the database.
-   - **Endpoint**: `GET /api/products`
+   - **Endpoint**: *`GET /api/products`*
    - **Query Parameters**:
      - `page` (optional, number): The page number to retrieve (default is 1).
      - `limit` (optional, number): The number of products to return per page (default is 10).
@@ -167,9 +197,10 @@ The server will be running on `http://localhost:5000`.
 3. #### **Search and Filter Products**
 
     - Searches for products based on various filter criteria. All filters are optional and can be combined.
-    - **Endpoint**: `GET /api/products/search`
+    - **Endpoint**: *`GET /api/products/search`*
     - **Query Parameters**:
       - `brand` (optional, string): Filter by brand name (case-insensitive, supports partial matches via regex).
+      - `name` (optional, string): Filter by product name (case-insensitive, supports partial matches via regex).
       - `color` (optional, string): Filter by color (case-insensitive, supports partial matches via regex).
       - `minPrice` (optional, number): Returns products with a price greater than or equal to this value.
       - `maxPrice` (optional, number): Returns products with a price less than or equal to this value.

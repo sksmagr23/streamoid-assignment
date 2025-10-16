@@ -1,0 +1,51 @@
+sku,name,brand,color,size,mrp,price,quantity
+TSHIRT-RED-M-001,Classic Cotton T-Shirt,StreamThreads,Red,M,799,499,50
+TSHIRT-BLK-L-002,Classic Cotton T-Shirt,StreamThreads,Black,L,799,549,32
+POLO-GRN-XL-003,Heritage Polo,StreamThreads,Green,XL,1299,999,18
+JEANS-BLU-32-004,Slim Fit Jeans,DenimWorks,Blue,32,1999,1599,25
+JEANS-BLK-30-005,Slim Fit Jeans,DenimWorks,Black,30,1999,1499,28
+DRESS-PNK-S-006,Floral Summer Dress,BloomWear,Pink,S,2499,2199,10
+DRESS-YLW-M-007,Floral Summer Dress,BloomWear,Yellow,M,2499,1999,7
+SHOE-WHT-7-008,Everyday Sneakers,StrideLab,White,UK7,2999,2499,45
+SHOE-NVY-8-009,Everyday Sneakers,StrideLab,Navy,UK8,2999,2499,39
+BAG-TOTE-BEI-010,Canvas Tote Bag,CarryCo,Beige,OneSize,899,699,65
+BELT-BRN-38-011,Leather Belt,CarryCo,Brown,38,1199,899,40
+SAREE-RED-FS-012,Banarasi Silk Saree,Ethniq,Red,Free,6999,5999,5
+KURTA-BLU-M-013,Cotton Kurta,Ethniq,Blue,M,1599,1299,22
+JKT-OLV-L-014,Utility Jacket,UrbanEdge,Olive,L,3499,2999,16
+TSHIRT-GRY-S-015,Graphic Tee,UrbanEdge,Grey,S,899,699,30
+TSHIRT-WHT-XS-016,Graphic Tee,UrbanEdge,White,XS,899,649,24
+SHIRT-CHK-M-017,Checked Casual Shirt,ButtonUp,Multi,M,1799,1399,16
+SHIRT-PLN-L-018,Plain Oxford Shirt,ButtonUp,Blue,L,1899,1999,12
+HOODIE-CHR-XL-019,Cozy Hoodie,SnugWear,Charcoal,XL,2199,1799,11
+HOODIE-CRM-M-020,Cozy Hoodie,SnugWear,Cream,M,,1699,9
+JEANS-GRY-34-021,Relaxed Fit Jeans,DenimWorks,Grey,34,2199,1799,20
+TSHIRT-NVY-L-022,V-Neck T-Shirt,StreamThreads,Navy,L,899,599,40
+DRESS-BLK-L-023,Evening Gown,BloomWear,Black,L,4999,3999,8
+SHOE-BLK-9-024,Leather Loafers,StrideLab,Black,UK9,3499,2999,15
+BAG-BCKPK-BLK-025,Travel Backpack,CarryCo,Black,OneSize,2599,2099,-5
+KURTA-WHT-L-026,Linen Kurta,Ethniq,White,L,1899,1499,18
+JKT-DENIM-M-027,Classic Denim Jacket,UrbanEdge,Blue,M,2999,2499,12
+SHIRT-STR-S-028,Striped Formal Shirt,ButtonUp,White/Blue,S,1999,1599,25
+SWEAT-GRY-M-029,Crewneck Sweatshirt,SnugWear,Grey,M,1699,1299,22
+POLO-WHT-M-030,Performance Polo,,White,M,1499,1199,30
+JEANS-SKN-28-031,High-Waist Skinny Jeans,DenimWorks,Black,28,2499,1999,17
+TSHIRT-PNK-S-032,Plain Round-Neck,StreamThreads,Pink,S,699,449,55
+SKIRT-FLR-M-033,Floral Midi Skirt,BloomWear,Multi,M,1599,1299,14
+RUN-SHOE-10-034,Marathon Runners,StrideLab,Neon,UK10,4599,3999,20
+SATCHEL-TAN-OS-035,Leather Satchel,CarryCo,Tan,OneSize,3299,2799,10
+SHERWANI-GLD-L-036,Wedding Sherwani,Ethniq,Gold,L,14999,12999,4
+BOMBER-JKT-BLK-L-037,Satin Bomber Jacket,UrbanEdge,Black,L,3999,3499,9
+SHIRT-LIN-XL-038,Linen Casual Shirt,ButtonUp,Beige,XL,2199,1799,19
+ZIP-HOODIE-NVY-L-039,Zip-Up Hoodie,SnugWear,Navy,L,2499,1999,15
+TSHIRT-YLW-M-040,Mustard Yellow Tee,StreamThreads,Yellow,M,799,,40
+CARGO-PNT-GRN-32-041,Cargo Pants,UrbanEdge,Green,32,2399,1899,21
+SHOE-CANVAS-6-042,Canvas Plimsolls,StrideLab,Grey,UK6,1499,999,35
+TOP-LACE-S-043,Lace Crop Top,BloomWear,White,S,1299,999,28
+POLO-BLK-L-044,Signature Polo,StreamThreads,Black,L,1399,1099,26
+JEANS-WHT-30-045,White Denim Jeans,DenimWorks,White,30,2299,1899,13
+BAG-SLING-RED-046,Crossbody Sling Bag,CarryCo,Red,OneSize,1199,899,33
+DUPATTA-PNK-FS-047,Silk Dupatta,Ethniq,Pink,Free,999,799,40
+SHIRT-FLNL-M-048,Flannel Shirt,ButtonUp,Red/Black,M,1999,NA,20
+SWEATPANTS-BLK-S-049,Jogger Sweatpants,SnugWear,Black,S,1899,1499,29
+,V-Neck Graphic Tee,UrbanEdge,Black,M,999,749,18

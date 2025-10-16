@@ -42,7 +42,7 @@ export const uploadProducts = async (req, res) => {
                 failedValidation.push({ row: rowCount, data: row, reason: 'Quantity can\'t be negative.' });
                 return;
             }
-            
+
             validProducts.push({
                 ...row,
                 mrp: parsedMrp,
@@ -86,7 +86,7 @@ export const getAllProducts = async (req, res) => {
 
         const products = await Product.find({}).skip(skip).limit(limit);
         const totalProducts = await Product.countDocuments();
-        
+
         res.status(200).json({
             totalProducts,
             totalPages: Math.ceil(totalProducts / limit),
@@ -100,8 +100,12 @@ export const getAllProducts = async (req, res) => {
 
 export const filterProducts = async (req, res) => {
     try {
-        const { brand, color, minPrice, maxPrice } = req.query;
+        const { name, brand, color, minPrice, maxPrice } = req.query;
         const filter = {};
+
+        if (name) {
+            filter.name = { $regex: name, $options: 'i' };
+        }
 
         if (brand) {
             filter.brand = { $regex: brand, $options: 'i' };
@@ -120,7 +124,7 @@ export const filterProducts = async (req, res) => {
                 filter.price.$lte = parseFloat(maxPrice);
             }
         }
-        
+
         const products = await Product.find(filter);
 
         if (products.length === 0) {
