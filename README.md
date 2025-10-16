@@ -32,6 +32,7 @@ streamoid-assignment/
 -  **File Handling**: `multer` for handling multipart/form-data (file uploads) and `csv-parser` for streaming and parsing large CSV files efficiently.
 -  **Testing**: `Jest` and Supertest for API integration testing.
 - **Containerization**: `Docker`
+- **Swagger for API documentation**
 ---
 
 ## Project Setup Instructions
@@ -97,7 +98,7 @@ npm test
 
 ---
 
-## API Documentation
+## API Description
 
 1. #### **Upload Products via CSV**
    
@@ -240,3 +241,7 @@ npm test
      ```
 
 ---     
+
+### Swagger Documentation 
+- The API is documented using Swagger (OpenAPI Specification). We can access the Swagger UI to explore and test the API endpoints.
+- **Swagger UI Endpoint**: `http://localhost:5000/api-docs`

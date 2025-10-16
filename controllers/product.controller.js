@@ -1,10 +1,16 @@
 import csv from 'csv-parser';
 import { Readable } from 'stream';
+import path from 'path';
 import Product from '../models/product.model.js';
 
 export const uploadProducts = async (req, res) => {
     if (!req.file) {
         return res.status(400).json({ message: 'No file found. Please upload a CSV file.' });
+    }
+
+    const suffix = path.extname(req.file.originalname).toLowerCase();
+    if (suffix !== '.csv') {
+        return res.status(400).json({ message: 'Only .csv files are accepted' });
     }
 
     const validProducts = [];

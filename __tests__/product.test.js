@@ -35,6 +35,17 @@ describe('Product API', () => {
             expect(res.body.message).toContain('No file found');
         });
 
+        it('should return 400 if the uploaded file is not a CSV', async () => {
+            const nonCsvBuffer = Buffer.from('this is not a csv');
+
+            const res = await request(app)
+                .post('/api/upload')
+                .attach('file', nonCsvBuffer, 'sample.txt');
+
+            expect(res.statusCode).toEqual(400);
+            expect(res.body.message).toBe('Only .csv files are accepted');
+        });
+
         it('should correctly parse a valid CSV and store product data', async () => {
             const validCsv = `sku,name,brand,color,size,mrp,price,quantity
             TSHIRT-RED-M-001,T-Shirt,CoolBrand,Red,M,800,500,10
